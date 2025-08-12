@@ -48,7 +48,7 @@ export default function Navigation() {
           {/* Logo/Signature */}
           <div className="flex items-center">
             <div className="text-2xl font-bold">
-              <span className="font-signature bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+              <span className="font-signature bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
                 Manel Mahmoudi
               </span>
              

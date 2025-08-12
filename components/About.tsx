@@ -150,9 +150,9 @@ export default function About() {
 
             {/* AI-Focused Skills Preview */}
             <div className="glass p-6 rounded-xl relative overflow-hidden group hover:scale-105 transition-all duration-500">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-indigo-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <h4 className="text-xl font-bold text-text-primary dark:text-text-primary text-text-primary-light mb-4 flex items-center gap-2 relative z-10">
-                <Brain className="text-blue-500 animate-pulse" size={24} />
+                <Brain className="text-purple-500 animate-pulse" size={24} />
                 AI & Tech Stack
               </h4>
               <div className="flex flex-wrap gap-3 relative z-10">
@@ -162,7 +162,7 @@ export default function About() {
                   { name: 'React', color: 'from-cyan-500 to-cyan-600' },
                   { name: 'Node.js', color: 'from-green-500 to-green-600' },
                   { name: 'PyTorch', color: 'from-red-500 to-red-600' },
-                  { name: 'TypeScript', color: 'from-blue-500 to-blue-600' },
+                  { name: 'TypeScript', color: 'from-indigo-500 to-indigo-600' },
                   { name: 'OpenAI API', color: 'from-purple-500 to-purple-600' },
                   { name: 'MongoDB', color: 'from-green-600 to-green-700' }
                 ].map((tech, index) => (

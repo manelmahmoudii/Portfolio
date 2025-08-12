@@ -122,8 +122,8 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 animate-fadeInUp" style={{animationDelay: '0.3s'}}>
             <button
               onClick={scrollToProjects}
-              className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 
-                       text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 
+              className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700
+                       text-white px-8 py-3 rounded-lg font-medium transition-all duration-300
                        flex items-center justify-center gap-2 transform hover:scale-105 hover:shadow-lg"
               data-macaly="view-work-button"
             >
@@ -137,7 +137,7 @@ export default function Hero() {
                        px-8 py-3 rounded-lg font-medium transition-all duration-300 
                        flex items-center justify-center gap-2 transform hover:scale-105"
             >
-              Get In Touch
+              Download CV
             </button>
           </div>
 
@@ -163,7 +163,7 @@ export default function Hero() {
         {/* Right Column - Floating Card */}
         <div className="relative animate-float">
           <div className="glass p-8 rounded-2xl relative overflow-hidden group hover:scale-105 transition-all duration-500">
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-indigo-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             
             <div className="space-y-6 relative z-10">
               <div className="flex items-center gap-3">
@@ -173,7 +173,7 @@ export default function Hero() {
               
               <div className="space-y-4">
                 <div className="flex items-center gap-3 transform hover:translate-x-2 transition-transform duration-300">
-                  <Code className="text-blue-500 animate-pulse" size={20} />
+                  <Code className="text-purple-500 animate-pulse" size={20} />
                   <span className="text-text-primary dark:text-text-primary text-text-primary-light">Full-Stack Development</span>
                 </div>
                 <div className="flex items-center gap-3 transform hover:translate-x-2 transition-transform duration-300">
@@ -181,7 +181,7 @@ export default function Hero() {
                   <span className="text-text-primary dark:text-text-primary text-text-primary-light">AI & Machine Learning</span>
                 </div>
                 <div className="flex items-center gap-3 transform hover:translate-x-2 transition-transform duration-300">
-                  <Globe className="text-blue-600 animate-pulse" size={20} />
+                  <Globe className="text-pink-500 animate-pulse" size={20} />
                   <span className="text-text-primary dark:text-text-primary text-text-primary-light">Modern Web Solutions</span>
                 </div>
                 <div className="flex items-center gap-3 transform hover:translate-x-2 transition-transform duration-300">

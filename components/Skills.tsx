@@ -34,7 +34,7 @@ export default function Skills() {
       description: 'Building intelligent systems that learn and adapt',
       skills: [
         { name: 'Python', level: 95, color: 'from-emerald-500 to-emerald-600' },
-        { name: 'TensorFlow', level: 90, color: 'from-blue-500 to-blue-600' },
+        { name: 'TensorFlow', level: 90, color: 'from-purple-500 to-purple-600' },
         { name: 'PyTorch', level: 85, color: 'from-purple-500 to-purple-600' },
         { name: 'OpenAI API', level: 90, color: 'from-indigo-500 to-indigo-600' }
       ],
@@ -46,7 +46,7 @@ export default function Skills() {
       description: 'Creating beautiful, responsive user interfaces',
       skills: [
         { name: 'React', level: 88, color: 'from-cyan-500 to-cyan-600' },
-        { name: 'TypeScript', level: 82, color: 'from-blue-500 to-blue-600' },
+        { name: 'TypeScript', level: 82, color: 'from-indigo-500 to-indigo-600' },
         { name: 'Next.js', level: 85, color: 'from-gray-700 to-gray-800' },
         { name: 'Tailwind CSS', level: 90, color: 'from-teal-500 to-teal-600' }
       ],
@@ -59,7 +59,7 @@ export default function Skills() {
       skills: [
         { name: 'Node.js', level: 87, color: 'from-green-500 to-green-600' },
         { name: 'MongoDB', level: 80, color: 'from-green-600 to-green-700' },
-        { name: 'PostgreSQL', level: 85, color: 'from-blue-600 to-blue-700' },
+        { name: 'PostgreSQL', level: 85, color: 'from-indigo-600 to-indigo-700' },
         { name: 'AWS', level: 78, color: 'from-orange-500 to-orange-600' }
       ],
       average: 82
@@ -70,7 +70,7 @@ export default function Skills() {
     { name: 'Langchain', icon: Brain, color: 'text-purple-400' },
     { name: 'Hugging Face', icon: Bot, color: 'text-yellow-400' },
     { name: 'Vector DBs', icon: Database, color: 'text-green-400' },
-    { name: 'MLOps', icon: Cpu, color: 'text-blue-400' },
+    { name: 'MLOps', icon: Cpu, color: 'text-indigo-400' },
     { name: 'Transformers', icon: Zap, color: 'text-pink-400' },
     { name: 'AutoML', icon: Brain, color: 'text-indigo-400' }
   ];

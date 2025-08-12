@@ -76,17 +76,17 @@ export default function Certifications() {
         }`}>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6" data-macaly="certifications-title">
             <span className="text-text-primary dark:text-text-primary text-text-primary-light">Professional </span>
-            <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
               Certifications
             </span>
             <div className="flex items-center justify-center gap-2 mt-2">
-              <Award className="text-blue-500 animate-pulse" size={24} />
+              <Award className="text-purple-500 animate-pulse" size={24} />
             </div>
           </h2>
           <p className="text-text-secondary dark:text-text-secondary text-text-secondary-light text-lg max-w-3xl mx-auto leading-relaxed">
             Validated expertise in cutting-edge technologies and industry best practices
           </p>
-          <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-indigo-500 mx-auto mt-4"></div>
+          <div className="w-32 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mt-4"></div>
         </div>
 
         {/* Certifications Grid */}
@@ -99,7 +99,7 @@ export default function Certifications() {
               }`}
               style={{animationDelay: `${index * 0.2}s`}}
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-indigo-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               
               <div className="relative z-10">
                 <div className="flex items-start justify-between mb-4">
@@ -112,10 +112,10 @@ export default function Certifications() {
                   </div>
                   <a 
                     href={cert.verifyUrl}
-                    className="p-2 bg-blue-500/20 rounded-lg hover:bg-blue-500/30 transition-colors duration-300"
+                    className="p-2 bg-purple-500/20 rounded-lg hover:bg-purple-500/30 transition-colors duration-300"
                     aria-label="Verify Certificate"
                   >
-                    <ExternalLink size={16} className="text-blue-500" />
+                    <ExternalLink size={16} className="text-purple-500" />
                   </a>
                 </div>
                 
@@ -123,7 +123,7 @@ export default function Certifications() {
                   {cert.title}
                 </h3>
                 
-                <p className="text-blue-500 font-semibold mb-3">
+                <p className="text-purple-500 font-semibold mb-3">
                   {cert.issuer}
                 </p>
                 
@@ -144,7 +144,7 @@ export default function Certifications() {
       </div>
 
       {/* Background Elements */}
-      <div className="absolute top-20 left-10 w-48 h-48 bg-blue-500/10 rounded-full blur-2xl animate-blob"></div>
+      <div className="absolute top-20 left-10 w-48 h-48 bg-purple-500/10 rounded-full blur-2xl animate-blob"></div>
       <div className="absolute bottom-20 right-10 w-56 h-56 bg-indigo-500/10 rounded-full blur-2xl animate-blob animation-delay-2000"></div>
     </section>
   );

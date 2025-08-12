@@ -69,8 +69,8 @@ export default function Contact() {
       label: 'Location',
       value: 'France / Remote',
       description: 'Working globally',
-      color: 'text-blue-400',
-      bgColor: 'from-blue-500/20 to-blue-600/20'
+      color: 'text-indigo-400',
+      bgColor: 'from-indigo-500/20 to-indigo-600/20'
     }
   ];
 
