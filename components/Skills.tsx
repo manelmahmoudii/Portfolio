@@ -17,7 +17,7 @@ export default function Skills() {
           setIsVisible(true);
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.1 }
     );
 
     if (sectionRef.current) {
@@ -108,7 +108,7 @@ export default function Skills() {
           {skillCategories.map((category, categoryIndex) => (
             <div 
               key={categoryIndex}
-              className={`glass p-8 rounded-2xl hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25 
+              className={`glass p-4 sm:p-8 rounded-2xl hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25
                          transition-all duration-500 relative overflow-hidden group transform ${
                 isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
               }`}
@@ -189,11 +189,11 @@ export default function Skills() {
             </p>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-4 relative z-10">
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-4 relative z-10">
             {learningSkills.map((skill, index) => (
-              <div 
+              <div
                 key={index}
-                className="flex items-center gap-3 px-6 py-3 glass rounded-full hover:scale-110 
+                className="flex items-center gap-2 sm:gap-3 px-3 sm:px-6 py-2 sm:py-3 glass rounded-full hover:scale-110
                            transition-all duration-300 cursor-default group/skill animate-fadeInUp"
                 style={{animationDelay: `${index * 0.1}s`}}
               >
