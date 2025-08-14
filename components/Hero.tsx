@@ -133,10 +133,11 @@ export default function Hero() {
             
             <button
               onClick={scrollToContact}
-              className="border border-blue-500/50 hover:bg-blue-500/10 text-text-primary dark:text-text-primary text-text-primary-light 
-                       px-8 py-3 rounded-lg font-medium transition-all duration-300 
+              className="border border-blue-500/50 hover:bg-blue-500/10 text-text-primary dark:text-text-primary text-text-primary-light
+                       px-8 py-3 rounded-lg font-medium transition-all duration-300
                        flex items-center justify-center gap-2 transform hover:scale-105"
             >
+              <Download size={20} />
               Download CV
             </button>
           </div>
@@ -154,7 +155,7 @@ export default function Hero() {
                 aria-label={social.label}
                 style={{animationDelay: `${0.7 + index * 0.1}s`}}
               >
-                <social.icon size={20} className="text-text-secondary dark:text-text-secondary text-text-secondary-light" />
+                <social.icon size={20} className="text-text-primary dark:text-text-secondary text-text-primary-light" />
               </a>
             ))}
           </div>
