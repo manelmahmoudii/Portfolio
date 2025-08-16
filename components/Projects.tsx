@@ -297,7 +297,7 @@ export default function Projects() {
                   : 'glass text-text-secondary dark:text-text-secondary text-text-secondary-light hover:text-text-primary dark:hover:text-text-primary hover:text-text-primary-light'
               }`}
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
               <span className="relative z-10">{filter}</span>
             </button>
           ))}
@@ -306,10 +306,10 @@ export default function Projects() {
         {/* Enhanced Projects Grid */}
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8 mb-16">
           {filteredProjects.map((project, index) => (
-            <div 
+            <div
               key={project.id}
-              className={`glass rounded-2xl overflow-hidden hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25 
-                         transition-all duration-500 relative group transform ${
+              className={`glass rounded-2xl overflow-hidden hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25
+                         transition-all duration-500 relative group transform border border-purple-500/10 hover:border-purple-500/30 ${
                 isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
               }`}
               style={{animationDelay: `${index * 0.1}s`}}
@@ -325,13 +325,12 @@ export default function Projects() {
 
               {/* Project Image */}
               <div className="relative h-48 overflow-hidden">
-                <img 
-                  src={project.image} 
+                <img
+                  src={project.image}
                   alt={project.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                
+
                 {/* Hover Overlay */}
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="flex gap-3">
@@ -362,7 +361,6 @@ export default function Projects() {
 
               {/* Project Content */}
               <div className="p-6 relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 
                 <h3 className="text-xl font-bold text-text-primary dark:text-text-primary text-text-primary-light mb-3 relative z-10 group-hover:text-purple-400 transition-colors duration-300">
                   {project.title}
@@ -375,11 +373,10 @@ export default function Projects() {
                 {/* Tech Tags */}
                 <div className="flex flex-wrap gap-2 mb-4 relative z-10">
                   {project.tags.map((tag, tagIndex) => (
-                    <span 
+                    <span
                       key={tagIndex}
                       className="px-3 py-1 bg-surface dark:bg-surface bg-surface-light rounded-full text-xs font-medium
-                               text-accent dark:text-accent text-accent-light border border-accent/20 dark:border-accent/20 border-accent-light/20
-                               hover:bg-accent dark:hover:bg-accent hover:bg-accent-light hover:text-dark transition-all duration-300"
+                               text-accent dark:text-accent text-accent-light border border-accent/20 dark:border-accent/20 border-accent-light/20"
                     >
                       {tag}
                     </span>
@@ -413,7 +410,7 @@ export default function Projects() {
           isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
         }`}>
           <div className="glass p-8 rounded-2xl max-w-2xl mx-auto relative overflow-hidden group">
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
             
             <div className="relative z-10">
               <div className="flex items-center justify-center gap-2 mb-4">
@@ -452,8 +449,8 @@ export default function Projects() {
 
       {/* Project Details Modal */}
       {selectedProject && (
-        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <div className="bg-surface dark:bg-surface bg-surface-light max-w-4xl w-full max-h-[90vh] overflow-y-auto rounded-2xl relative">
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-fadeIn">
+          <div className="bg-surface dark:bg-surface bg-surface-light max-w-4xl w-full max-h-[90vh] overflow-y-auto rounded-2xl relative animate-slideInUp">
             <button
               onClick={() => setSelectedProject(null)}
               className="absolute top-4 right-4 p-2 bg-red-500/20 hover:bg-red-500/30 rounded-full text-red-400 hover:text-red-300 transition-colors z-10"

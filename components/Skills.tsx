@@ -45,7 +45,7 @@ export default function Skills() {
       icon: Code,
       description: 'Creating beautiful, responsive user interfaces',
       skills: [
-        { name: 'Angular', level: 90, color: 'from-red-500 to-red-600' },
+        { name: 'Angular', level: 90, color: 'from-purple-500 to-purple-600' },
         { name: 'ReactJs', level: 85, color: 'from-cyan-500 to-cyan-600' },
         { name: 'JavaScript', level: 88, color: 'from-yellow-500 to-yellow-600' },
         { name: 'Bootstrap', level: 85, color: 'from-purple-500 to-purple-600' }

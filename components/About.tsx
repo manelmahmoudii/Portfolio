@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from 'react';
-import { User, Heart, Coffee, Calendar, Award, Target, Brain, Sparkles, Zap, Laptop } from 'lucide-react';
+import { User, Heart, Coffee, Calendar, Award, Target, Brain, Sparkles, Zap, Laptop, Trophy, Users, Rocket } from 'lucide-react';
 
 export default function About() {
   const [isVisible, setIsVisible] = useState(false);
@@ -157,7 +157,7 @@ export default function About() {
               </h4>
               <div className="flex flex-wrap gap-3 relative z-10">
                 {[
-                  { name: 'Angular', color: 'from-red-500 to-red-600' },
+                  { name: 'Angular', color: 'from-purple-500 to-purple-600' },
                   { name: 'ReactJs', color: 'from-cyan-500 to-cyan-600' },
                   { name: 'Spring Boot', color: 'from-green-500 to-green-600' },
                   { name: 'Python', color: 'from-emerald-500 to-emerald-600' },
@@ -178,19 +178,40 @@ export default function About() {
               </div>
             </div>
 
-            {/* Enhanced Philosophy */}
-            <div className="glass p-6 rounded-xl relative overflow-hidden group hover:scale-105 transition-all duration-500">
-              <div className="absolute inset-0 bg-gradient-to-r from-pink-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            {/* Professional Highlights */}
+            <div className="glass p-8 rounded-2xl hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25
+                           transition-all duration-500 relative overflow-hidden group">
+              <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <h4 className="text-xl font-bold text-text-primary dark:text-text-primary text-text-primary-light mb-4 flex items-center gap-2 relative z-10">
-                <Sparkles className="text-pink-400 animate-spin" size={24} />
-                My Philosophy
+                <Trophy className="text-indigo-500 animate-pulse" size={24} />
+                Why Choose Me?
               </h4>
-              <blockquote className="text-text-secondary dark:text-text-secondary text-text-secondary-light italic border-l-4 border-gradient-to-b from-purple-400 to-pink-400 pl-4 relative z-10 text-lg">
-                "AI isn't just about algorithms – it's about creating intelligent solutions that 
-                empower humans to achieve the impossible. Every line of code is a step toward 
-                a smarter, more connected world." 
-                <span className="text-purple-400 font-bold block mt-2">- Manel M. 🤖✨</span>
-              </blockquote>
+              <div className="space-y-3 relative z-10">
+                <div className="flex items-center gap-3 p-3 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-lg">
+                  <Zap className="text-yellow-400" size={20} />
+                  <span className="text-text-secondary dark:text-text-secondary text-text-secondary-light">
+                    <strong className="text-purple-400">Fast Learner:</strong> Quickly adapt to new technologies and frameworks
+                  </span>
+                </div>
+                <div className="flex items-center gap-3 p-3 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 rounded-lg">
+                  <Target className="text-green-400" size={20} />
+                  <span className="text-text-secondary dark:text-text-secondary text-text-secondary-light">
+                    <strong className="text-indigo-400">Problem Solver:</strong> AI-driven solutions for complex business challenges
+                  </span>
+                </div>
+                <div className="flex items-center gap-3 p-3 bg-gradient-to-r from-pink-500/10 to-purple-500/10 rounded-lg">
+                  <Users className="text-cyan-400" size={20} />
+                  <span className="text-text-secondary dark:text-text-secondary text-text-secondary-light">
+                    <strong className="text-pink-400">Team Player:</strong> Proven leadership and collaboration skills
+                  </span>
+                </div>
+                <div className="flex items-center gap-3 p-3 bg-gradient-to-r from-emerald-500/10 to-indigo-500/10 rounded-lg">
+                  <Rocket className="text-orange-400" size={20} />
+                  <span className="text-text-secondary dark:text-text-secondary text-text-secondary-light">
+                    <strong className="text-emerald-400">Innovation Focused:</strong> Always exploring cutting-edge technologies
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
