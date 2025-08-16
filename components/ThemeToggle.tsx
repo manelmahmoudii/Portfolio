@@ -8,12 +8,12 @@ export default function ThemeToggle() {
 
   useEffect(() => {
     console.log("ThemeToggle mounted");
-    
+
     // Check for saved theme preference or default to dark
     const savedTheme = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
-    const isDarkMode = savedTheme ? savedTheme === 'dark' : prefersDark;
+
+    // Always default to dark mode if no saved preference
+    const isDarkMode = savedTheme ? savedTheme === 'dark' : true;
     setIsDark(isDarkMode);
     
     // Apply theme to document

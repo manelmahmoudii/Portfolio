@@ -74,7 +74,7 @@ export default function About() {
                   <User className="text-white" size={24} />
                 </div>
                 <h3 className="text-2xl font-bold text-text-primary dark:text-text-primary text-text-primary-light">
-                  My AI Journey 🚀
+                  Who I Am 🙋‍♂️
                 </h3>
               </div>
               
@@ -83,20 +83,21 @@ export default function About() {
                   <span className="absolute -left-4 top-0 text-purple-400 text-2xl">"</span>
                   I'm <strong className="text-accent dark:text-accent text-accent-light">Manel Mahmoudi</strong>,
                   a graduate in Information Systems Development from ISET Béja.
-                  As a serious and motivated candidate, I aim to pursue my studies to strengthen
-                  and deepen my technical and professional skills.
+                  As a dedicated professional, I am committed to continuous learning and
+                  excellence in software development and emerging technologies.
                 </p>
 
                 <p>
-                  As a <strong className="text-purple-400">freelance developer</strong>, I specialize in
-                  Angular, ReactJs, Spring Boot, and AI technologies like RAG and NLP.
-                  I don't just code – I design intelligent systems that learn and adapt.
+                  As a <strong className="text-purple-400">freelance developer</strong>,
+                  I create innovative digital solutions that bridge the gap between complex technical
+                  requirements and user-friendly experiences. My passion lies in building scalable
+                  applications and modern web solutions that solve real-world problems.
                 </p>
 
                 <p>
-                  <strong className="text-pink-400">Ready to hire?</strong> I'm currently available
-                  for exciting projects that push the boundaries of web development and AI.
-                  Let's build the future together! ✨
+                  <strong className="text-pink-400">Ready to collaborate?</strong> I'm currently available
+                  for challenging projects that require technical expertise, creative problem-solving,
+                  and a commitment to delivering exceptional results. Let's create something amazing together! ✨
                 </p>
               </div>
 
@@ -106,8 +107,9 @@ export default function About() {
                   <span className="font-semibold">Current Mission:</span>
                 </div>
                 <p className="text-text-secondary dark:text-text-secondary text-text-secondary-light">
-                  Building innovative web and mobile applications that transform how
-                  businesses operate. Every project is an opportunity to innovate with the latest technologies! 🎯
+                  Developing cutting-edge digital solutions that drive business transformation
+                  and enhance user experiences. Focused on delivering high-quality, scalable
+                  applications that make a meaningful impact. 🎯
                 </p>
                 
                 <div className="mt-4 flex items-center gap-2">
@@ -148,36 +150,7 @@ export default function About() {
               ))}
             </div>
 
-            {/* AI-Focused Skills Preview */}
-            <div className="glass p-6 rounded-xl relative overflow-hidden group hover:scale-105 transition-all duration-500">
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <h4 className="text-xl font-bold text-text-primary dark:text-text-primary text-text-primary-light mb-4 flex items-center gap-2 relative z-10">
-                <Brain className="text-purple-500 animate-pulse" size={24} />
-                AI & Tech Stack
-              </h4>
-              <div className="flex flex-wrap gap-3 relative z-10">
-                {[
-                  { name: 'Angular', color: 'from-purple-500 to-purple-600' },
-                  { name: 'ReactJs', color: 'from-cyan-500 to-cyan-600' },
-                  { name: 'Spring Boot', color: 'from-green-500 to-green-600' },
-                  { name: 'Python', color: 'from-emerald-500 to-emerald-600' },
-                  { name: 'MongoDB', color: 'from-green-600 to-green-700' },
-                  { name: 'MySQL', color: 'from-blue-500 to-blue-600' },
-                  { name: 'RAG', color: 'from-purple-500 to-purple-600' },
-                  { name: 'Docker', color: 'from-indigo-500 to-indigo-600' }
-                ].map((tech, index) => (
-                  <span 
-                    key={index}
-                    className={`px-4 py-2 bg-gradient-to-r ${tech.color} text-white rounded-full text-sm font-semibold
-                               hover:scale-110 transition-all duration-300 cursor-default transform animate-fadeInUp shadow-lg`}
-                    style={{animationDelay: `${index * 0.1}s`}}
-                  >
-                    {tech.name}
-                  </span>
-                ))}
-              </div>
-            </div>
-
+           
             {/* Professional Highlights */}
             <div className="glass p-8 rounded-2xl hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25
                            transition-all duration-500 relative overflow-hidden group">
