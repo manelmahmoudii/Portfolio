@@ -46,32 +46,36 @@ const testimonials: Testimonial[] = [
   },
   {
     id: 2,
-    name: "sarah_tech",
-    role: "Project Manager",
-    company: "Tech Agency",
+    name: "okan_arslan",
+    role: "Audio Engineer",
+    company: "",
     rating: 5,
-    review: "Manel is a true professional! He built our React dashboard from scratch and it looks amazing. Clean code, responsive design, and delivered before deadline. Highly recommend for any web development project!",
-    date: "1 month ago",
-    project: "React Dashboard"
+    review: "She did great work in a short time. she solved all the problems. I recommend her to everyone, she is skilled and understanding.",
+    date: "4 months ago",
+    project: "Sınavlar Cebimde – ROCKET",
+    country: "Turkey 🇹🇷"
+,
   },
   {
     id: 3,
-    name: "startup_founder",
-    role: "CEO",
-    company: "SaaS Company",
+    name: "elias_arnold",
+    role: "Fiverr Buyer",
+    company: "",
     rating: 5,
-    review: "Incredible developer! Manel helped us build our MVP with Spring Boot backend and Angular frontend. His expertise in full-stack development saved us months of work. Professional, reliable, and skilled!",
+    review: "Manel M truly IMPRESSED with their professionalism in software development, delivering top-notch work. Their quick responsiveness and language fluency made collaboration a breeze, while their timely delivery was the cherry on top. Working with Manel was an absolute pleasure! 👏",
     date: "6 weeks ago",
-    project: "SaaS Platform"
+    project: "Medien Akademie Website",
+    country: "Germany"
+
   },
   {
     id: 4,
-    name: "marketing_pro",
+    name: "maxg101",
     role: "Marketing Director",
-    company: "Digital Agency",
+    company: "",
     rating: 5,
-    review: "Perfect experience working with Manel! He created a beautiful landing page that converts really well. Great attention to detail, fast turnaround, and excellent communication throughout the project.",
-    date: "2 months ago",
+    review: "Manel did an amazing job aiding me with my needs. Highly recommend if you want your work done professionally and efficiently! She responded to all my questions and requests in a timely manner given the time zone difference. 10/10!",
+    date: "8 months ago",
     project: "Landing Page"
   },
   {

@@ -34,9 +34,9 @@ export default function Projects() {
   const projects = [
     {
       id: 1,
-      title: 'Swiss Real Estate Intelligent Chatbot',
+      title: 'Swiss Estate AI',
       description: 'Development of an intelligent chatbot for Swiss real estate using RAG and NLP technologies',
-      image: 'https://images.pexels.com/photos/8849281/pexels-photo-8849281.jpeg?auto=compress&cs=tinysrgb&h=400&w=600',
+      image: '/Chatbot.png',
       tags: ['RAG', 'Python', 'ChromaDB', 'NLP'],
       category: ['Featured', 'AI/ML', 'Freelance'],
       stats: { stars: 45, forks: 12, views: 892 },
@@ -68,9 +68,9 @@ export default function Projects() {
     },
     {
       id: 2,
-      title: 'Inter-Enterprise Data Centralization Platform',
+      title: '3SDATAHUB',
       description: 'AI-powered platform for intelligent data centralization with automated cleaning, normalization and consolidation using Sentence-Transformers',
-      image: 'https://images.pexels.com/photos/7606070/pexels-photo-7606070.jpeg?auto=compress&cs=tinysrgb&h=400&w=600',
+      image: '/3SDATAHUB.png',
       tags: ['ReactJs', 'Spring Boot', 'MongoDB', 'Python', 'AI', 'FastAPI'],
       category: ['Featured', 'AI/ML', 'Fullstack'],
       stats: { stars: 67, forks: 23, views: 1340 },
@@ -107,7 +107,7 @@ export default function Projects() {
     },
     {
       id: 3,
-      title: 'Project Management Application',
+      title: 'PMT',
       description: 'Design and development of a web application dedicated to project management (Freelance Fiverr)',
       image: 'https://images.pexels.com/photos/8849281/pexels-photo-8849281.jpeg?auto=compress&cs=tinysrgb&h=400&w=600',
       tags: ['Angular', 'Spring Boot', 'Maria DB'],
@@ -137,7 +137,7 @@ export default function Projects() {
     },
     {
       id: 4,
-      title: 'SoMezzo - Performance Management',
+      title: 'ProPilot',
       description: 'Development of a web and mobile application for performance management with team leadership',
       image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&h=400&w=600',
       tags: ['Angular', 'Spring Boot', 'MySQL', 'Android'],
