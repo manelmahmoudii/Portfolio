@@ -36,7 +36,7 @@ export default function Projects() {
       id: 1,
       title: 'Swiss Estate AI',
       description: 'Development of an intelligent chatbot for Swiss real estate using RAG and NLP technologies',
-      image: '/Chatbot (2).png',
+      image: '/chatbot(2).png',
       tags: ['RAG', 'Python', 'ChromaDB', 'NLP'],
       category: ['Featured', 'AI/ML', 'Freelance'],
       stats: { stars: 45, forks: 12, views: 892 },
