@@ -71,7 +71,7 @@ const testimonials: Testimonial[] = [
   {
     id: 4,
     name: "maxg101",
-    role: "Marketing Director",
+    role: "Fiverr Buyer",
     company: "",
     rating: 5,
     review: "Manel did an amazing job aiding me with my needs. Highly recommend if you want your work done professionally and efficiently! She responded to all my questions and requests in a timely manner given the time zone difference. 10/10!",
@@ -151,9 +151,7 @@ export default function Testimonials() {
             </h2>
             <Quote className="text-pink-400 animate-pulse" size={32} />
           </div>
-          <p className="text-xl text-text-secondary dark:text-text-secondary text-text-secondary-light max-w-3xl mx-auto">
-            What my clients say about working with me on Fiverr 
-          </p>
+          
 
           {/* Fiverr Badge */}
           <div className="flex items-center justify-center gap-2 mt-4">
