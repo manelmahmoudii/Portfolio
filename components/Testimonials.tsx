@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-import { Star, Quote, ChevronLeft, ChevronRight, User, Calendar, ExternalLink } from 'lucide-react';
+import { Star, Quote, ChevronLeft, ChevronRight, User, Calendar, ExternalLink, Repeat } from 'lucide-react';
 
 interface Testimonial {
   id: number;
@@ -13,6 +13,8 @@ interface Testimonial {
   date: string;
   avatar?: string;
   project: string;
+  country?: string;
+  isRepeatClient?: boolean;
 }
 
 // Logo Fiverr local
@@ -31,13 +33,16 @@ const FiverrIcon = ({ size = 50, className = "" }: { size?: number; className?: 
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: "alexm_business",
-    role: "Business Owner",
-    company: "E-commerce Startup",
+    name: "Mathieu Mari",
+    role: "Software Developer",
+    company: "13 years experience",
     rating: 5,
-    review: "Outstanding work! Manel delivered exactly what I needed for my online store. The Angular frontend is smooth and the backend integration is perfect. Fast delivery and great communication. Will definitely work with him again!",
-    date: "2 weeks ago",
-    project: "E-commerce Website"
+    review: "Excellent travail !",
+    date: "1 week ago",
+    project: "AI Chatbot",
+    avatar: "/mathieumari.jpg",
+    country: "France 🇫🇷",
+    isRepeatClient: true
   },
   {
     id: 2,
@@ -143,7 +148,7 @@ export default function Testimonials() {
             <Quote className="text-pink-400 animate-pulse" size={32} />
           </div>
           <p className="text-xl text-text-secondary dark:text-text-secondary text-text-secondary-light max-w-3xl mx-auto">
-            What my clients say about working with me on Fiverr and other platforms
+            What my clients say about working with me on Fiverr 
           </p>
 
           {/* Fiverr Badge */}
@@ -159,6 +164,24 @@ export default function Testimonials() {
         <div className={`relative transform transition-all duration-1000 delay-300 ${
           isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
         }`}>
+          {/* Navigation Buttons - Outside */}
+          <div className="absolute top-1/2 -translate-y-1/2 -left-16 -right-16 flex justify-between pointer-events-none z-20">
+            <button
+              onClick={prevTestimonial}
+              className="p-4 bg-purple-600/20 hover:bg-purple-600/40 rounded-full text-purple-400 hover:text-white transition-all duration-300 hover:scale-110 pointer-events-auto shadow-lg backdrop-blur-sm"
+              aria-label="Previous testimonial"
+            >
+              <ChevronLeft size={28} />
+            </button>
+            <button
+              onClick={nextTestimonial}
+              className="p-4 bg-purple-600/20 hover:bg-purple-600/40 rounded-full text-purple-400 hover:text-white transition-all duration-300 hover:scale-110 pointer-events-auto shadow-lg backdrop-blur-sm"
+              aria-label="Next testimonial"
+            >
+              <ChevronRight size={28} />
+            </button>
+          </div>
+
           <div className="glass rounded-3xl p-8 md:p-12 relative overflow-hidden group">
             <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             
@@ -167,13 +190,34 @@ export default function Testimonials() {
               <div className="flex flex-col md:flex-row items-start gap-8">
                 {/* Avatar and Info */}
                 <div className="flex-shrink-0">
-                  <div className="w-20 h-20 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center mb-4">
-                    <User className="text-white" size={32} />
+                  <div className="mb-4">
+                    {testimonials[currentIndex].avatar ? (
+                      <img
+                        src={testimonials[currentIndex].avatar}
+                        alt={testimonials[currentIndex].name}
+                        className="w-20 h-20 rounded-full object-cover border-4 border-purple-400/30"
+                      />
+                    ) : (
+                      <div className="w-20 h-20 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center">
+                        <User className="text-white" size={32} />
+                      </div>
+                    )}
                   </div>
                   <div className="text-center md:text-left">
-                    <h4 className="font-bold text-text-primary dark:text-text-primary text-text-primary-light">
-                      {testimonials[currentIndex].name}
-                    </h4>
+                    <div className="flex items-center justify-center md:justify-start gap-2 mb-1">
+                      <h4 className="font-bold text-text-primary dark:text-text-primary text-text-primary-light">
+                        {testimonials[currentIndex].name}
+                      </h4>
+                      {testimonials[currentIndex].country && (
+                        <span className="text-lg flex items-center gap-1">
+                          <svg width="20" height="15" viewBox="0 0 3 2" className="rounded-sm">
+                            <rect width="1" height="2" fill="#002654"/>
+                            <rect x="1" width="1" height="2" fill="#FFFFFF"/>
+                            <rect x="2" width="1" height="2" fill="#CE1126"/>
+                          </svg>
+                        </span>
+                      )}
+                    </div>
                     <p className="text-purple-400 font-medium">{testimonials[currentIndex].role}</p>
                     <p className="text-text-secondary dark:text-text-secondary text-text-secondary-light text-sm">
                       {testimonials[currentIndex].company}
@@ -183,11 +227,19 @@ export default function Testimonials() {
 
                 {/* Review Content */}
                 <div className="flex-1">
-                  <div className="flex items-center gap-2 mb-4">
-                    <div className="flex gap-1">
-                      {renderStars(testimonials[currentIndex].rating)}
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center gap-2">
+                      <div className="flex gap-1">
+                        {renderStars(testimonials[currentIndex].rating)}
+                      </div>
+                      <span className="text-yellow-400 font-bold">5.0</span>
                     </div>
-                    <span className="text-yellow-400 font-bold">5.0</span>
+                    {testimonials[currentIndex].isRepeatClient && (
+                      <div className="flex items-center gap-1 bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-sm font-medium">
+                        <Repeat size={14} />
+                        <span>Repeat Client</span>
+                      </div>
+                    )}
                   </div>
                   
                   <blockquote className="text-lg text-text-secondary dark:text-text-secondary text-text-secondary-light leading-relaxed mb-4">
@@ -224,23 +276,7 @@ export default function Testimonials() {
               </div>
             </div>
 
-            {/* Navigation Buttons */}
-            <div className="absolute top-1/2 -translate-y-1/2 left-4 right-4 flex justify-between pointer-events-none">
-              <button
-                onClick={prevTestimonial}
-                className="p-3 bg-purple-600/20 hover:bg-purple-600/40 rounded-full text-purple-400 hover:text-white transition-all duration-300 hover:scale-110 pointer-events-auto"
-                aria-label="Previous testimonial"
-              >
-                <ChevronLeft size={24} />
-              </button>
-              <button
-                onClick={nextTestimonial}
-                className="p-3 bg-purple-600/20 hover:bg-purple-600/40 rounded-full text-purple-400 hover:text-white transition-all duration-300 hover:scale-110 pointer-events-auto"
-                aria-label="Next testimonial"
-              >
-                <ChevronRight size={24} />
-              </button>
-            </div>
+
           </div>
 
           {/* Dots Indicator */}
