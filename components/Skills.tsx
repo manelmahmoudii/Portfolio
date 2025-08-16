@@ -33,46 +33,46 @@ export default function Skills() {
       icon: Brain,
       description: 'Building intelligent systems that learn and adapt',
       skills: [
-        { name: 'Python', level: 95, color: 'from-emerald-500 to-emerald-600' },
-        { name: 'TensorFlow', level: 90, color: 'from-purple-500 to-purple-600' },
-        { name: 'PyTorch', level: 85, color: 'from-purple-500 to-purple-600' },
-        { name: 'OpenAI API', level: 90, color: 'from-indigo-500 to-indigo-600' }
+        { name: 'Python', level: 90, color: 'from-emerald-500 to-emerald-600' },
+        { name: 'RAG', level: 85, color: 'from-purple-500 to-purple-600' },
+        { name: 'NLP', level: 80, color: 'from-purple-500 to-purple-600' },
+        { name: 'Sentence-Transformers', level: 85, color: 'from-indigo-500 to-indigo-600' }
       ],
-      average: 90
+      average: 85
     },
     {
       title: 'Frontend Development',
       icon: Code,
       description: 'Creating beautiful, responsive user interfaces',
       skills: [
-        { name: 'React', level: 88, color: 'from-cyan-500 to-cyan-600' },
-        { name: 'TypeScript', level: 82, color: 'from-indigo-500 to-indigo-600' },
-        { name: 'Next.js', level: 85, color: 'from-gray-700 to-gray-800' },
-        { name: 'Tailwind CSS', level: 90, color: 'from-teal-500 to-teal-600' }
+        { name: 'Angular', level: 90, color: 'from-red-500 to-red-600' },
+        { name: 'ReactJs', level: 85, color: 'from-cyan-500 to-cyan-600' },
+        { name: 'JavaScript', level: 88, color: 'from-yellow-500 to-yellow-600' },
+        { name: 'Bootstrap', level: 85, color: 'from-purple-500 to-purple-600' }
       ],
-      average: 86
+      average: 87
     },
     {
-      title: 'Backend & Cloud',
+      title: 'Backend & Database',
       icon: Database,
-      description: 'Scalable server solutions and cloud architecture',
+      description: 'Scalable server solutions and database management',
       skills: [
-        { name: 'Node.js', level: 87, color: 'from-green-500 to-green-600' },
-        { name: 'MongoDB', level: 80, color: 'from-green-600 to-green-700' },
-        { name: 'PostgreSQL', level: 85, color: 'from-indigo-600 to-indigo-700' },
-        { name: 'AWS', level: 78, color: 'from-orange-500 to-orange-600' }
+        { name: 'Spring Boot', level: 90, color: 'from-green-500 to-green-600' },
+        { name: 'MongoDB', level: 85, color: 'from-green-600 to-green-700' },
+        { name: 'MySQL', level: 88, color: 'from-blue-500 to-blue-600' },
+        { name: 'PHP/Symfony', level: 80, color: 'from-indigo-500 to-indigo-600' }
       ],
-      average: 82
+      average: 86
     }
   ];
 
   const learningSkills = [
-    { name: 'Langchain', icon: Brain, color: 'text-purple-400' },
-    { name: 'Hugging Face', icon: Bot, color: 'text-yellow-400' },
-    { name: 'Vector DBs', icon: Database, color: 'text-green-400' },
-    { name: 'MLOps', icon: Cpu, color: 'text-indigo-400' },
-    { name: 'Transformers', icon: Zap, color: 'text-pink-400' },
-    { name: 'AutoML', icon: Brain, color: 'text-indigo-400' }
+    { name: 'Docker', icon: Database, color: 'text-blue-400' },
+    { name: 'Flutter', icon: Smartphone, color: 'text-cyan-400' },
+    { name: 'Azure DevOps', icon: Cpu, color: 'text-indigo-400' },
+    { name: 'SCRUM', icon: Zap, color: 'text-green-400' },
+    { name: 'Android', icon: Smartphone, color: 'text-green-400' },
+    { name: 'ChromaDB', icon: Database, color: 'text-purple-400' }
   ];
 
   return (
@@ -104,7 +104,7 @@ export default function Skills() {
         </div>
 
         {/* Enhanced Skills Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8 mb-16">
           {skillCategories.map((category, categoryIndex) => (
             <div 
               key={categoryIndex}

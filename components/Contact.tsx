@@ -51,7 +51,7 @@ export default function Contact() {
     {
       icon: Mail,
       label: 'Email',
-      value: 'manel.mahmoudi.dev@gmail.com',
+      value: 'manelmahmoudi03@gmail.com',
       description: 'Best way to reach me',
       color: 'text-purple-400',
       bgColor: 'from-purple-500/20 to-purple-600/20'
@@ -59,7 +59,7 @@ export default function Contact() {
     {
       icon: Phone,
       label: 'Phone',
-      value: '+33 6 XX XX XX XX',
+      value: '(+216) 29 867 680',
       description: 'Available for calls',
       color: 'text-green-400',
       bgColor: 'from-green-500/20 to-green-600/20'
@@ -67,7 +67,7 @@ export default function Contact() {
     {
       icon: MapPin,
       label: 'Location',
-      value: 'France / Remote',
+      value: 'Tunisia / Remote',
       description: 'Working globally',
       color: 'text-indigo-400',
       bgColor: 'from-indigo-500/20 to-indigo-600/20'

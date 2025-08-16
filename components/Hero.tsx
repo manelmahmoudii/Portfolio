@@ -10,10 +10,10 @@ export default function Hero() {
   const [isTyping, setIsTyping] = useState(true);
 
   const roles = [
-    'AI-Powered Fullstack Developer 🤖',
-    'Freelance Tech Innovator 💡', 
-    'Machine Learning Engineer 🧠',
-    'React & Node.js Expert ⚡',
+    'Fullstack & AI Developer 🤖',
+    'Freelance Tech Innovator 💡',
+    'Angular & Spring Boot Specialist 🧠',
+    'RAG & NLP Expert ⚡',
     'Your Next Tech Partner 🚀'
   ];
 
@@ -52,21 +52,21 @@ export default function Hero() {
   };
 
   const socialLinks = [
-    { 
-      icon: Github, 
-      href: 'https://github.com/manelmahmoudi', 
+    {
+      icon: Github,
+      href: 'https://github.com/manelmahmoudi',
       label: 'GitHub',
       color: 'hover:text-white hover:bg-gray-800'
     },
-    { 
-      icon: Linkedin, 
-      href: 'https://linkedin.com/in/manel-mahmoudi', 
+    {
+      icon: Linkedin,
+      href: 'https://www.linkedin.com/in/manel-mahmoudi-3a94b5251/',
       label: 'LinkedIn',
       color: 'hover:text-white hover:bg-blue-600'
     },
-    { 
-      icon: Mail, 
-      href: 'mailto:manel.mahmoudi.dev@gmail.com', 
+    {
+      icon: Mail,
+      href: 'mailto:manelmahmoudi03@gmail.com',
       label: 'Email',
       color: 'hover:text-white hover:bg-red-500'
     }

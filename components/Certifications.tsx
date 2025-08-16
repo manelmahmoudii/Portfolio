@@ -26,39 +26,30 @@ export default function Certifications() {
 
   const certifications = [
     {
-      title: 'AWS Certified Solutions Architect',
-      issuer: 'Amazon Web Services',
-      date: '2024',
-      credentialId: 'AWS-SAA-2024-001',
+      title: 'Advanced Python Programming',
+      issuer: 'TACT (TechLink Project)',
+      date: 'July 2023',
+      credentialId: 'TACT-PY-2023-001',
       verifyUrl: '#',
-      icon: '☁️',
+      icon: '🐍',
       status: 'Active'
     },
     {
-      title: 'Google Cloud Professional ML Engineer',
-      issuer: 'Google Cloud',
-      date: '2023',
-      credentialId: 'GCP-MLE-2023-002',
+      title: 'JavaScript Essentials 1 (JSE)',
+      issuer: 'CISCO',
+      date: 'May 2023',
+      credentialId: 'CISCO-JSE-2023-002',
       verifyUrl: '#',
-      icon: '🤖',
+      icon: '📜',
       status: 'Active'
     },
     {
-      title: 'Meta React Developer Certificate',
-      issuer: 'Meta (Facebook)',
-      date: '2023',
-      credentialId: 'META-RD-2023-003',
+      title: 'Web Development Fundamentals',
+      issuer: 'SOLOLEARN',
+      date: 'December 2022',
+      credentialId: 'SOLO-WDF-2022-003',
       verifyUrl: '#',
-      icon: '⚛️',
-      status: 'Active'
-    },
-    {
-      title: 'TensorFlow Developer Certificate',
-      issuer: 'TensorFlow',
-      date: '2023',
-      credentialId: 'TF-DEV-2023-004',
-      verifyUrl: '#',
-      icon: '🧠',
+      icon: '🌐',
       status: 'Active'
     }
   ];

@@ -81,21 +81,21 @@ export default function About() {
               <div className="space-y-4 text-text-secondary dark:text-text-secondary text-text-secondary-light leading-relaxed relative z-10" data-macaly="about-story">
                 <p className="relative">
                   <span className="absolute -left-4 top-0 text-purple-400 text-2xl">"</span>
-                  I'm <strong className="text-accent dark:text-accent text-accent-light">Manel Mahmoudi</strong>, 
-                  a passionate AI & Fullstack Developer with 5+ years transforming innovative ideas 
-                  into intelligent, scalable applications. My journey started with curiosity about 
-                  machine learning and evolved into mastering the art of creating AI-driven solutions.
+                  I'm <strong className="text-accent dark:text-accent text-accent-light">Manel Mahmoudi</strong>,
+                  a graduate in Information Systems Development from ISET Béja.
+                  As a serious and motivated candidate, I aim to pursue my studies to strengthen
+                  and deepen my technical and professional skills.
                 </p>
-                
+
                 <p>
-                  As a <strong className="text-purple-400">freelancer</strong>, I specialize in React, 
-                  Node.js, Python, and cutting-edge AI technologies. I don't just code – I architect 
-                  intelligent systems that learn, adapt, and deliver extraordinary user experiences.
+                  As a <strong className="text-purple-400">freelance developer</strong>, I specialize in
+                  Angular, ReactJs, Spring Boot, and AI technologies like RAG and NLP.
+                  I don't just code – I design intelligent systems that learn and adapt.
                 </p>
-                
+
                 <p>
-                  <strong className="text-pink-400">Ready to hire?</strong> I'm currently available 
-                  for exciting projects that push the boundaries of what's possible with AI and web development. 
+                  <strong className="text-pink-400">Ready to hire?</strong> I'm currently available
+                  for exciting projects that push the boundaries of web development and AI.
                   Let's build the future together! ✨
                 </p>
               </div>
@@ -106,8 +106,8 @@ export default function About() {
                   <span className="font-semibold">Current Mission:</span>
                 </div>
                 <p className="text-text-secondary dark:text-text-secondary text-text-secondary-light">
-                  Building next-generation AI applications that revolutionize how businesses operate 
-                  and how users interact with technology. Every project is an opportunity to innovate! 🎯
+                  Building innovative web and mobile applications that transform how
+                  businesses operate. Every project is an opportunity to innovate with the latest technologies! 🎯
                 </p>
                 
                 <div className="mt-4 flex items-center gap-2">
@@ -157,14 +157,14 @@ export default function About() {
               </h4>
               <div className="flex flex-wrap gap-3 relative z-10">
                 {[
+                  { name: 'Angular', color: 'from-red-500 to-red-600' },
+                  { name: 'ReactJs', color: 'from-cyan-500 to-cyan-600' },
+                  { name: 'Spring Boot', color: 'from-green-500 to-green-600' },
                   { name: 'Python', color: 'from-emerald-500 to-emerald-600' },
-                  { name: 'TensorFlow', color: 'from-orange-500 to-orange-600' },
-                  { name: 'React', color: 'from-cyan-500 to-cyan-600' },
-                  { name: 'Node.js', color: 'from-green-500 to-green-600' },
-                  { name: 'PyTorch', color: 'from-red-500 to-red-600' },
-                  { name: 'TypeScript', color: 'from-indigo-500 to-indigo-600' },
-                  { name: 'OpenAI API', color: 'from-purple-500 to-purple-600' },
-                  { name: 'MongoDB', color: 'from-green-600 to-green-700' }
+                  { name: 'MongoDB', color: 'from-green-600 to-green-700' },
+                  { name: 'MySQL', color: 'from-blue-500 to-blue-600' },
+                  { name: 'RAG', color: 'from-purple-500 to-purple-600' },
+                  { name: 'Docker', color: 'from-indigo-500 to-indigo-600' }
                 ].map((tech, index) => (
                   <span 
                     key={index}

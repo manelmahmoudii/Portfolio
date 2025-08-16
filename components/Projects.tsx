@@ -6,6 +6,7 @@ import { Github, ExternalLink, Star, Users, Eye, Brain, Bot, Zap, Sparkles } fro
 export default function Projects() {
   const [isVisible, setIsVisible] = useState(false);
   const [activeFilter, setActiveFilter] = useState('All');
+  const [selectedProject, setSelectedProject] = useState<any>(null);
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -33,75 +34,220 @@ export default function Projects() {
   const projects = [
     {
       id: 1,
-      title: 'AI-Powered Content Generator',
-      description: 'Intelligent content creation platform using GPT-4 and custom fine-tuned models for businesses',
+      title: 'Swiss Real Estate Intelligent Chatbot',
+      description: 'Development of an intelligent chatbot for Swiss real estate using RAG and NLP technologies',
       image: 'https://images.pexels.com/photos/8849281/pexels-photo-8849281.jpeg?auto=compress&cs=tinysrgb&h=400&w=600',
-      tags: ['AI/ML', 'React', 'Node.js', 'OpenAI'],
+      tags: ['RAG', 'Python', 'ChromaDB', 'NLP'],
       category: ['Featured', 'AI/ML', 'Freelance'],
       stats: { stars: 45, forks: 12, views: 892 },
       featured: true,
       demoUrl: '#',
-      githubUrl: '#'
+      githubUrl: '#',
+      details: {
+        fullDescription: 'An intelligent chatbot system designed for Swiss real estate market using advanced RAG (Retrieval-Augmented Generation) technology.',
+        features: [
+          'Natural language processing for property queries',
+          'RAG-based information retrieval',
+          'ChromaDB vector database integration',
+          'Sentence-Transformers for semantic search',
+          'OpenRouter API integration',
+          'Bootstrap responsive interface',
+          'Multi-language support (French, German, Italian)',
+          'Real-time property recommendations'
+        ],
+        aiFeatures: [
+          'Advanced RAG implementation',
+          'Semantic similarity search',
+          'Context-aware responses',
+          'Property matching algorithms'
+        ],
+        screenshots: [
+          'https://images.pexels.com/photos/8849281/pexels-photo-8849281.jpeg?auto=compress&cs=tinysrgb&h=400&w=600'
+        ]
+      }
     },
     {
       id: 2,
-      title: 'Smart Data Analytics Dashboard',
-      description: 'Real-time analytics platform with ML-powered insights and predictive modeling for enterprise clients',
+      title: 'Inter-Enterprise Data Centralization Platform',
+      description: 'AI-powered platform for intelligent data centralization with automated cleaning, normalization and consolidation using Sentence-Transformers',
       image: 'https://images.pexels.com/photos/7606070/pexels-photo-7606070.jpeg?auto=compress&cs=tinysrgb&h=400&w=600',
-      tags: ['React', 'Python', 'TensorFlow', 'D3.js'],
-      category: ['Featured', 'AI/ML', 'React'],
+      tags: ['ReactJs', 'Spring Boot', 'MongoDB', 'Python', 'AI', 'FastAPI'],
+      category: ['Featured', 'AI/ML', 'Fullstack'],
       stats: { stars: 67, forks: 23, views: 1340 },
       featured: true,
       demoUrl: '#',
-      githubUrl: '#'
+      githubUrl: '#',
+      details: {
+        fullDescription: 'A comprehensive platform that leverages AI for intelligent data processing and enterprise management.',
+        features: [
+          'User account management with JWT authentication',
+          'Automatic password generation and email reset',
+          'Enterprise workspace management',
+          'Integrated calendar for event management',
+          'Shared storage with smart file handling',
+          'AI-powered Excel file processing',
+          'Automated data cleaning and normalization',
+          'Intelligent column mapping using Sentence-Transformers',
+          'Dynamic homepage with statistical analysis',
+          'Contact classification (Lead, Prospect, Client)',
+          'Dark mode interface'
+        ],
+        aiFeatures: [
+          'Automated data cleaning using pandas and NumPy',
+          'Semantic column normalization with Sentence-Transformers',
+          'Intelligent data consolidation and mapping',
+          'Smart duplicate detection and removal',
+          'Automated report generation'
+        ],
+        screenshots: [
+          'https://images.pexels.com/photos/7606070/pexels-photo-7606070.jpeg?auto=compress&cs=tinysrgb&h=400&w=600',
+          'https://images.pexels.com/photos/8849281/pexels-photo-8849281.jpeg?auto=compress&cs=tinysrgb&h=400&w=600'
+        ]
+      }
     },
     {
       id: 3,
-      title: 'Conversational AI Chatbot',
-      description: 'Multi-language AI chatbot with natural language processing and sentiment analysis',
+      title: 'Project Management Application',
+      description: 'Design and development of a web application dedicated to project management (Freelance Fiverr)',
       image: 'https://images.pexels.com/photos/8849281/pexels-photo-8849281.jpeg?auto=compress&cs=tinysrgb&h=400&w=600',
-      tags: ['Python', 'NLP', 'React', 'WebSocket'],
-      category: ['AI/ML', 'Fullstack'],
+      tags: ['Angular', 'Spring Boot', 'Maria DB'],
+      category: ['Fullstack', 'Freelance'],
       stats: { stars: 89, forks: 34, views: 2150 },
       featured: false,
       demoUrl: '#',
-      githubUrl: '#'
+      githubUrl: '#',
+      details: {
+        fullDescription: 'A comprehensive project management solution built for a client on Fiverr, featuring task tracking, team collaboration, and progress monitoring.',
+        features: [
+          'Project creation and management',
+          'Task assignment and tracking',
+          'Team member management',
+          'Progress monitoring dashboard',
+          'File upload and sharing',
+          'Deadline management',
+          'Real-time notifications',
+          'Reporting and analytics',
+          'User role management',
+          'Responsive design for all devices'
+        ],
+        screenshots: [
+          'https://images.pexels.com/photos/8849281/pexels-photo-8849281.jpeg?auto=compress&cs=tinysrgb&h=400&w=600'
+        ]
+      }
     },
     {
       id: 4,
-      title: 'E-commerce Intelligence Suite',
-      description: 'Complete e-commerce solution with AI-driven recommendations and inventory optimization',
+      title: 'SoMezzo - Performance Management',
+      description: 'Development of a web and mobile application for performance management with team leadership',
       image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&h=400&w=600',
-      tags: ['Next.js', 'MongoDB', 'AI/ML', 'Stripe'],
-      category: ['Featured', 'Fullstack', 'Freelance'],
+      tags: ['Angular', 'Spring Boot', 'MySQL', 'Android'],
+      category: ['Featured', 'Fullstack'],
       stats: { stars: 156, forks: 78, views: 3200 },
       featured: true,
       demoUrl: '#',
-      githubUrl: '#'
+      githubUrl: '#',
+      details: {
+        fullDescription: 'An integration project focused on developing a comprehensive performance management system with both web and mobile interfaces, demonstrating leadership and team coordination skills.',
+        features: [
+          'Performance tracking dashboard',
+          'KPI monitoring and analytics',
+          'Team performance evaluation',
+          'Goal setting and tracking',
+          'Mobile application for on-the-go access',
+          'Real-time performance metrics',
+          'Employee feedback system',
+          'Reporting and data visualization',
+          'Multi-platform synchronization',
+          'SCRUM methodology implementation'
+        ],
+        teamFeatures: [
+          'Team leadership and coordination',
+          'SCRUM methodology for project delivery',
+          'Effective communication and collaboration',
+          'Project delivery within deadlines',
+          'GitHub version control management',
+          'Azure DevOps integration'
+        ],
+        screenshots: [
+          'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&h=400&w=600'
+        ]
+      }
     },
     {
       id: 5,
-      title: 'Computer Vision App',
-      description: 'Image recognition and processing application for medical diagnostics',
+      title: 'Client Visit Management Application',
+      description: 'Development of a web application dedicated to client visit management for web services (RNE)',
       image: 'https://images.pexels.com/photos/8849281/pexels-photo-8849281.jpeg?auto=compress&cs=tinysrgb&h=400&w=600',
-      tags: ['Python', 'OpenCV', 'PyTorch', 'React'],
-      category: ['AI/ML', 'React'],
+      tags: ['Angular', 'Spring Boot', 'Maria DB', 'JasperReports'],
+      category: ['Fullstack'],
       stats: { stars: 234, forks: 67, views: 4100 },
       featured: false,
       demoUrl: '#',
-      githubUrl: '#'
+      githubUrl: '#',
+      details: {
+        fullDescription: 'A professional web application developed during internship at RNE (Registre National des Entreprises) for managing client visits and web service interactions.',
+        features: [
+          'Client visit scheduling and management',
+          'Visitor registration system',
+          'Appointment booking interface',
+          'Visit history tracking',
+          'Client information management',
+          'Service request handling',
+          'Real-time availability checking',
+          'Notification system for appointments',
+          'Detailed reporting with JasperReports',
+          'Advanced report generation features'
+        ],
+        internshipFeatures: [
+          'Professional development environment',
+          'Government sector experience',
+          'Enterprise-level application development',
+          'Integration with existing RNE systems',
+          'Advanced reporting capabilities',
+          'Database optimization and management'
+        ],
+        screenshots: [
+          'https://images.pexels.com/photos/8849281/pexels-photo-8849281.jpeg?auto=compress&cs=tinysrgb&h=400&w=600'
+        ]
+      }
     },
     {
       id: 6,
-      title: 'Blockchain DeFi Platform',
-      description: 'Decentralized finance platform with AI-powered trading algorithms and risk assessment',
+      title: 'EasyColloc - Student Housing Platform',
+      description: 'Design and development of EasyColloc, a collaborative web platform for student housing',
       image: 'https://images.pexels.com/photos/3184302/pexels-photo-3184302.jpeg?auto=compress&cs=tinysrgb&h=400&w=600',
-      tags: ['Solidity', 'React', 'Web3.js', 'AI'],
-      category: ['Fullstack', 'Freelance'],
+      tags: ['Symfony', 'MySQL', 'PHP', 'HTML/CSS'],
+      category: ['Fullstack'],
       stats: { stars: 123, forks: 45, views: 2800 },
       featured: false,
       demoUrl: '#',
-      githubUrl: '#'
+      githubUrl: '#',
+      details: {
+        fullDescription: 'An integration project focused on creating a collaborative platform to help students find and manage shared housing arrangements, built using Symfony framework.',
+        features: [
+          'Student housing listings management',
+          'Roommate matching system',
+          'Property search and filtering',
+          'User profile management',
+          'Messaging system between students',
+          'Housing application tracking',
+          'Photo gallery for properties',
+          'Location-based search',
+          'Review and rating system',
+          'Responsive design for mobile access'
+        ],
+        academicFeatures: [
+          'Integration project for academic curriculum',
+          'Full-stack development experience',
+          'Database design and optimization',
+          'MVC architecture implementation',
+          'User authentication and security',
+          'Collaborative development practices'
+        ],
+        screenshots: [
+          'https://images.pexels.com/photos/3184302/pexels-photo-3184302.jpeg?auto=compress&cs=tinysrgb&h=400&w=600'
+        ]
+      }
     }
   ];
 
@@ -158,7 +304,7 @@ export default function Projects() {
         </div>
 
         {/* Enhanced Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8 mb-16">
           {filteredProjects.map((project, index) => (
             <div 
               key={project.id}
@@ -188,15 +334,22 @@ export default function Projects() {
                 
                 {/* Hover Overlay */}
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="flex gap-4">
-                    <a 
+                  <div className="flex gap-3">
+                    <button
+                      onClick={() => setSelectedProject(project)}
+                      className="p-3 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full text-white hover:scale-110 transition-transform duration-200"
+                      aria-label="View Details"
+                    >
+                      <Eye size={20} />
+                    </button>
+                    <a
                       href={project.demoUrl}
                       className="p-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-white hover:scale-110 transition-transform duration-200"
                       aria-label="View Demo"
                     >
                       <ExternalLink size={20} />
                     </a>
-                    <a 
+                    <a
                       href={project.githubUrl}
                       className="p-3 bg-gray-800 rounded-full text-white hover:scale-110 transition-transform duration-200"
                       aria-label="View Code"
@@ -296,6 +449,131 @@ export default function Projects() {
       <div className="absolute top-32 left-20 w-48 h-48 bg-purple-500/10 rounded-full blur-2xl animate-blob"></div>
       <div className="absolute bottom-32 right-20 w-56 h-56 bg-pink-500/10 rounded-full blur-2xl animate-blob animation-delay-2000"></div>
       <div className="absolute top-2/3 left-1/3 w-40 h-40 bg-indigo-500/10 rounded-full blur-2xl animate-blob animation-delay-4000"></div>
+
+      {/* Project Details Modal */}
+      {selectedProject && (
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <div className="bg-surface dark:bg-surface bg-surface-light max-w-4xl w-full max-h-[90vh] overflow-y-auto rounded-2xl relative">
+            <button
+              onClick={() => setSelectedProject(null)}
+              className="absolute top-4 right-4 p-2 bg-red-500/20 hover:bg-red-500/30 rounded-full text-red-400 hover:text-red-300 transition-colors z-10"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+
+            <div className="p-8">
+              <h2 className="text-3xl font-bold text-text-primary dark:text-text-primary text-text-primary-light mb-4">
+                {selectedProject.title}
+              </h2>
+
+              <p className="text-text-secondary dark:text-text-secondary text-text-secondary-light mb-6 text-lg">
+                {selectedProject.details?.fullDescription}
+              </p>
+
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-xl font-semibold text-purple-400 mb-4 flex items-center gap-2">
+                    <Sparkles size={20} />
+                    Key Features
+                  </h3>
+                  <ul className="space-y-2">
+                    {selectedProject.details?.features?.map((feature: string, index: number) => (
+                      <li key={index} className="flex items-start gap-2 text-text-secondary dark:text-text-secondary text-text-secondary-light">
+                        <span className="text-green-400 mt-1">•</span>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {selectedProject.details?.aiFeatures && (
+                  <div>
+                    <h3 className="text-xl font-semibold text-pink-400 mb-4 flex items-center gap-2">
+                      <Brain size={20} />
+                      AI Features
+                    </h3>
+                    <ul className="space-y-2">
+                      {selectedProject.details.aiFeatures.map((feature: string, index: number) => (
+                        <li key={index} className="flex items-start gap-2 text-text-secondary dark:text-text-secondary text-text-secondary-light">
+                          <span className="text-purple-400 mt-1">•</span>
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {selectedProject.details?.teamFeatures && (
+                  <div>
+                    <h3 className="text-xl font-semibold text-cyan-400 mb-4 flex items-center gap-2">
+                      <Users size={20} />
+                      Team Leadership
+                    </h3>
+                    <ul className="space-y-2">
+                      {selectedProject.details.teamFeatures.map((feature: string, index: number) => (
+                        <li key={index} className="flex items-start gap-2 text-text-secondary dark:text-text-secondary text-text-secondary-light">
+                          <span className="text-cyan-400 mt-1">•</span>
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {selectedProject.details?.internshipFeatures && (
+                  <div>
+                    <h3 className="text-xl font-semibold text-orange-400 mb-4 flex items-center gap-2">
+                      <Star size={20} />
+                      Professional Experience
+                    </h3>
+                    <ul className="space-y-2">
+                      {selectedProject.details.internshipFeatures.map((feature: string, index: number) => (
+                        <li key={index} className="flex items-start gap-2 text-text-secondary dark:text-text-secondary text-text-secondary-light">
+                          <span className="text-orange-400 mt-1">•</span>
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {selectedProject.details?.academicFeatures && (
+                  <div>
+                    <h3 className="text-xl font-semibold text-emerald-400 mb-4 flex items-center gap-2">
+                      <Star size={20} />
+                      Academic Project
+                    </h3>
+                    <ul className="space-y-2">
+                      {selectedProject.details.academicFeatures.map((feature: string, index: number) => (
+                        <li key={index} className="flex items-start gap-2 text-text-secondary dark:text-text-secondary text-text-secondary-light">
+                          <span className="text-emerald-400 mt-1">•</span>
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+
+              <div className="mt-8">
+                <h3 className="text-xl font-semibold text-indigo-400 mb-4">Technologies Used</h3>
+                <div className="flex flex-wrap gap-2">
+                  {selectedProject.tags.map((tag: string, index: number) => (
+                    <span
+                      key={index}
+                      className="px-3 py-1 bg-gradient-to-r from-purple-500/20 to-pink-500/20 text-purple-300 rounded-full text-sm border border-purple-400/30"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
