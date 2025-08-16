@@ -48,12 +48,12 @@ export default function About() {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6" data-macaly="about-title">
             <span className="text-text-primary dark:text-text-primary text-text-primary-light">About </span>
             <span className="bg-gradient-to-r from-purple-500 via-pink-500 to-indigo-500 bg-clip-text text-transparent">
-              Manel Mahmoudi
+              Me
             </span>
             <div className="flex items-center justify-center gap-2 mt-2">
               <Brain className="text-purple-400 animate-pulse" size={24} />
               <span className="text-lg font-normal text-accent dark:text-accent text-accent-light">
-                AI-Powered Freelancer
+                Smart Solutions Freelancer
               </span>
             </div>
           </h2>
