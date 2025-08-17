@@ -54,7 +54,7 @@ export default function Hero() {
   const socialLinks = [
     {
       icon: Github,
-      href: 'https://github.com/manelmahmoudi',
+      href: 'https://github.com/manelmahmoudii',
       label: 'GitHub',
       color: 'hover:text-white hover:bg-gray-800'
     },

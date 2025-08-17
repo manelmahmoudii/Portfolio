@@ -28,8 +28,8 @@ export default function About() {
   }, []);
 
   const stats = [
-    { icon: Brain, value: '5+', label: 'Years AI/ML' },
-    { icon: Laptop, value: '100+', label: 'Projects Delivered' },
+    { icon: Brain, value: '3+', label: 'Years Learning Web Dev' },
+    { icon: Laptop, value: '10+', label: 'Projects Delivered' },
     { icon: Coffee, value: '∞', label: 'Cups of Coffee' },
     { icon: Sparkles, value: '24/7', label: 'Available for Hire' }
   ];

@@ -426,7 +426,7 @@ export default function Projects() {
               </p>
               
               <a 
-                href="https://github.com/manelmahmoudi" 
+                href="https://github.com/manelmahmoudii" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 
