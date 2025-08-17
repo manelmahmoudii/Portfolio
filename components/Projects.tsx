@@ -29,7 +29,7 @@ export default function Projects() {
     return () => observer.disconnect();
   }, []);
 
-  const filters = ['All', 'Featured', 'AI/ML', 'React', 'Fullstack', 'Freelance'];
+  const filters = ['All', 'Featured', 'AI/ML', 'Fullstack', 'Freelance'];
 
   const projects = [
     {
