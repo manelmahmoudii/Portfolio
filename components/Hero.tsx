@@ -131,15 +131,16 @@ export default function Hero() {
               View My Work
             </button>
             
-            <button
-              onClick={scrollToContact}
-              className="border border-blue-500/50 hover:bg-blue-500/10 text-text-primary dark:text-text-primary text-text-primary-light
-                       px-8 py-3 rounded-lg font-medium transition-all duration-300
-                       flex items-center justify-center gap-2 transform hover:scale-105"
-            >
-              <Download size={20} />
-              Download CV
-            </button>
+           <a
+            href="/CV_ManelMahmoudi.pdf" // Assure-toi que ton CV est dans le dossier public
+            download="Manel_Mahmoudi_CV.pdf"
+            className="border border-blue-500/50 hover:bg-blue-500/10 text-text-primary dark:text-text-primary text-text-primary-light
+                      px-8 py-3 rounded-lg font-medium transition-all duration-300
+                      flex items-center justify-center gap-2 transform hover:scale-105"
+          >
+            <Download size={20} />
+            Download CV
+</a>
           </div>
 
           {/* Animated Social Links */}
