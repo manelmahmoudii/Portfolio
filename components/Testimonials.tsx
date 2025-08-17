@@ -76,19 +76,95 @@ const testimonials: Testimonial[] = [
     rating: 5,
     review: "Manel did an amazing job aiding me with my needs. Highly recommend if you want your work done professionally and efficiently! She responded to all my questions and requests in a timely manner given the time zone difference. 10/10!",
     date: "8 months ago",
-    project: "Landing Page"
+    project: "Landing Page",
+    country: "ÉTATS-UNIS 🇺🇸"
   },
-  {
-    id: 5,
-    name: "john_entrepreneur",
-    role: "Entrepreneur",
-    company: "Local Business",
-    rating: 5,
-    review: "Manel exceeded my expectations! Built a complete business website with admin panel. The design is modern and the functionality is exactly what I needed. Great value for money!",
-    date: "3 months ago",
-    project: "Business Website"
-  }
+ 
 ];
+
+
+// Petit composant qui rend un drapeau en SVG selon le pays
+const Flag = ({ country }: { country?: string }) => {
+  if (!country) return null;
+  const c = country.toLowerCase();
+
+  // TURQUIE 🇹🇷
+  if (c.includes("turkey") || c.includes("türkiye") || c.includes("🇹🇷")) {
+    return (
+      <svg width="20" height="14" viewBox="0 0 30 20" className="rounded-[2px]" aria-label="Turkey flag">
+        <rect width="30" height="20" fill="#E30A17" />
+        {/* Croissant */}
+        <circle cx="12" cy="10" r="6" fill="#fff" />
+        <circle cx="14" cy="10" r="5" fill="#E30A17" />
+        {/* Étoile */}
+        <polygon
+          points="19,10 16.9,10.6 17.5,8.6 16,7.2 18.1,7 19,5.1 19.9,7 22,7.2 20.5,8.6 21.1,10.6"
+          fill="#fff"
+        />
+      </svg>
+    );
+  }
+
+  // FRANCE 🇫🇷
+  if (c.includes("france") || c.includes("français") || c.includes("🇫🇷")) {
+    return (
+      <svg width="20" height="14" viewBox="0 0 3 2" className="rounded-[2px]" aria-label="France flag">
+        <rect width="1" height="2" fill="#002654" />
+        <rect x="1" width="1" height="2" fill="#fff" />
+        <rect x="2" width="1" height="2" fill="#CE1126" />
+      </svg>
+    );
+  }
+
+  // ALLEMAGNE 🇩🇪
+  if (c.includes("germany") || c.includes("deutschland") || c.includes("🇩🇪")) {
+    return (
+      <svg width="20" height="14" viewBox="0 0 3 2" className="rounded-[2px]" aria-label="Germany flag">
+        <rect width="3" height="2" fill="#000" />
+        <rect y="0.6667" width="3" height="0.6667" fill="#DD0000" />
+        <rect y="1.3333" width="3" height="0.6667" fill="#FFCE00" />
+      </svg>
+    );
+  }
+
+  // ÉTATS-UNIS 🇺🇸
+ // ÉTATS-UNIS 🇺🇸
+if (c.includes("united states") || c.includes("usa") || c.includes("us") || c.includes("🇺🇸")) {
+  return (
+    <svg width="20" height="14" viewBox="0 0 60 30" className="rounded-[2px]" aria-label="United States flag">
+      {/* Fond rouge/blanc */}
+      <rect width="60" height="30" fill="#b22234"/>
+      <g fill="#fff">
+        <rect y="3" width="60" height="3"/>
+        <rect y="9" width="60" height="3"/>
+        <rect y="15" width="60" height="3"/>
+        <rect y="21" width="60" height="3"/>
+        <rect y="27" width="60" height="3"/>
+      </g>
+      {/* Canton bleu */}
+      <rect width="25" height="17" fill="#3c3b6e"/>
+      {/* Quelques étoiles (pas toutes pour simplifier mais visuellement correct) */}
+      <g fill="#fff">
+        <circle cx="2.5" cy="2.5" r="0.9"/>
+        <circle cx="7.5" cy="2.5" r="0.9"/>
+        <circle cx="12.5" cy="2.5" r="0.9"/>
+        <circle cx="17.5" cy="2.5" r="0.9"/>
+        <circle cx="22.5" cy="2.5" r="0.9"/>
+        <circle cx="5" cy="5" r="0.9"/>
+        <circle cx="10" cy="5" r="0.9"/>
+        <circle cx="15" cy="5" r="0.9"/>
+        <circle cx="20" cy="5" r="0.9"/>
+      </g>
+    </svg>
+  );
+}
+
+
+  // Par défaut : affiche le texte tel quel (emoji par exemple)
+  return <span className="text-lg">{country}</span>;
+};
+
+
 
 export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -210,15 +286,12 @@ export default function Testimonials() {
                       <h4 className="font-bold text-text-primary dark:text-text-primary text-text-primary-light">
                         {testimonials[currentIndex].name}
                       </h4>
-                      {testimonials[currentIndex].country && (
-                        <span className="text-lg flex items-center gap-1">
-                          <svg width="20" height="15" viewBox="0 0 3 2" className="rounded-sm">
-                            <rect width="1" height="2" fill="#002654"/>
-                            <rect x="1" width="1" height="2" fill="#FFFFFF"/>
-                            <rect x="2" width="1" height="2" fill="#CE1126"/>
-                          </svg>
-                        </span>
-                      )}
+                     {testimonials[currentIndex].country && (
+  <span className="text-lg flex items-center gap-1">
+    <Flag country={testimonials[currentIndex].country} />
+  </span>
+)}
+
                     </div>
                     <p className="text-purple-400 font-medium">{testimonials[currentIndex].role}</p>
                     <p className="text-text-secondary dark:text-text-secondary text-text-secondary-light text-sm">
